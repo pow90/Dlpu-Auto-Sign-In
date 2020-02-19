@@ -53,6 +53,7 @@ driver.switch_to.alert.accept()
 browser.get("https://www.dxever.com/fei/delete/ncp/history.html")
 if "今天" in browser.page_source:
     print("签到成功")
+    exit(0)
 else:
     print("签到失败")
-    exit(0)
+    exit(1)
