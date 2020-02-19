@@ -17,7 +17,15 @@ except:
     print("参数不完整或错误，请检查用户名、密码和地点是否正确填写")
     exit(1)
 
-browser = webdriver.Chrome()
+options = webdriver.ChromeOptions()
+options.add_argument('--disable-infobars')
+options.add_argument("--disable-extensions");
+options.add_argument("--disable-gpu");
+options.add_argument("--disable-dev-shm-usage");
+options.add_argument("--no-sandbox");
+options.add_argument("--headless");
+browser = webdriver.Chrome(chrome_options=chrome_options)
+
 browser.get("https://www.dxever.com/fei/delete/ncp/login.html")
 time.sleep(5)
 browser.find_element_by_xpath('//*[@id="box"]/input[1]').send_keys(user)
