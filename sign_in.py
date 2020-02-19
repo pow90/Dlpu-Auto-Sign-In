@@ -1,4 +1,4 @@
-# coding=gbk
+# coding=UTF-8
 from selenium import webdriver
 import time
 import random
@@ -6,11 +6,11 @@ import string
 import sys
 
 try:
-    user = os.environ["username"]
-    pwd = os.environ["password"]
-    location = os.environ["location"]
+    user = os.environ.get["username"]
+    pwd = os.environ.get["password"]
+    location = os.environ.get["location"]
 except:
-    print("参数不完整，请检查用户名、密码和地点是否正确填写")
+    print("鍙傛暟涓嶅畬鏁达紝璇锋鏌ョ敤鎴峰悕銆佸瘑鐮佸拰鍦扮偣鏄惁姝ｇ‘濉啓")
     exit(1)
 
 browser = webdriver.Chrome()
@@ -24,7 +24,7 @@ time.sleep(1)
 try:
     browser.find_element_by_xpath('//*[@id="item"]/ul/li[1]/input')
 except:
-    print("用户名或密码错误")
+    print("鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒")
     exit(1)
 
 browser.find_element_by_xpath('//*[@id="item"]/ul/li[1]/input').send_keys(location)
@@ -40,8 +40,8 @@ time.sleep(1)
     
 
 browser.get("https://www.dxever.com/fei/delete/ncp/history.html")
-if "今天" in browser.page_source:
-    print("签到成功")
+if "浠婂ぉ" in browser.page_source:
+    print("绛惧埌鎴愬姛")
 else:
-    print("签到失败")
+    print("绛惧埌澶辫触")
     exit(0)
