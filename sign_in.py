@@ -26,7 +26,7 @@ options.add_argument("--no-sandbox");
 options.add_argument("--headless");
 browser = webdriver.Chrome(options=options)
 
-def LoginIn():
+def LogIn():
     browser.get("https://www.dxever.com/fei/delete/ncp/login.html")
     time.sleep(5)
     browser.find_element_by_xpath('//*[@id="box"]/input[1]').send_keys(user)
@@ -34,13 +34,13 @@ def LoginIn():
     browser.find_element_by_xpath('//*[@id="box"]/button').click()
     time.sleep(5)
 
-LoginIn()
+LogIn()
 
 try:
     browser.find_element_by_xpath('//*[@id="item"]/ul/li[1]/input')
 except:
     time.sleep(5)
-    LoginIn()
+    LogIn()
     try:
         browser.find_element_by_xpath('//*[@id="item"]/ul/li[1]/input')
     except:
@@ -55,9 +55,8 @@ browser.find_element_by_xpath('//*[@id="item"]/ul/li[5]/div/input[3]').click()
 browser.find_element_by_xpath('//*[@id="item"]/ul/li[6]/div/input[2]').click()
 browser.find_element_by_xpath('//*[@id="item"]/ul/li[7]/div/input[2]').click()
 browser.find_element_by_xpath('//*[@id="item"]/div/button').click()
-time.sleep(1)
+time.sleep(5)
 
-browser.switch_to.alert.accept()
 browser.get("https://www.dxever.com/fei/delete/ncp/history.html")
 if "今天" in browser.page_source:
     print("签到成功")
