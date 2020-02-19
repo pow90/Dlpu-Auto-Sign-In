@@ -7,10 +7,10 @@ import sys
 
 try:
     user = os.environ.get('username')
-    pwd = os.environ.get["password"]
-    location = os.environ.get["location"]
+    pwd = os.environ.get('password')
+    location = os.environ.get('location')
 except:
-    print("参数不完整，请检查用户名、密码和地点是否正确填写")
+    print("参数不完整或错误，请检查用户名、密码和地点是否正确填写")
     exit(1)
 
 browser = webdriver.Chrome()
