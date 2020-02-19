@@ -6,7 +6,7 @@ import string
 import sys
 
 try:
-    user = os.environ.get["username"]
+    user = os.environ.get('username')
     pwd = os.environ.get["password"]
     location = os.environ.get["location"]
 except:
@@ -15,11 +15,11 @@ except:
 
 browser = webdriver.Chrome()
 browser.get("https://www.dxever.com/fei/delete/ncp/login.html")
-time.sleep(1)
+time.sleep(5)
 browser.find_element_by_xpath('//*[@id="box"]/input[1]').send_keys(user)
 browser.find_element_by_xpath('//*[@id="box"]/input[2]').send_keys(pwd)
 browser.find_element_by_xpath('//*[@id="box"]/button').click()
-time.sleep(1)
+time.sleep(5)
 
 try:
     browser.find_element_by_xpath('//*[@id="item"]/ul/li[1]/input')
