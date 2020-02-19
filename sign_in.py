@@ -24,7 +24,7 @@ options.add_argument("--disable-gpu");
 options.add_argument("--disable-dev-shm-usage");
 options.add_argument("--no-sandbox");
 options.add_argument("--headless");
-browser = webdriver.Chrome(chrome_options=chrome_options)
+browser = webdriver.Chrome(options=options)
 
 browser.get("https://www.dxever.com/fei/delete/ncp/login.html")
 time.sleep(5)
