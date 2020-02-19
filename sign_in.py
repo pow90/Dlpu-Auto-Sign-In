@@ -4,16 +4,16 @@ import time
 import random
 import string
 import sys
+import os
 
 try:
-    user = os.environ.get('username')
+    user = os.environ["username"]
+    pwd = os.environ["password"]
+    location = os.environ["location"]
     print(user)
-    pwd = os.environ.get('password')
     print(pwd)
-    location = os.environ.get('location')
     print(location)
 except:
-    print(user)
     print("参数不完整或错误，请检查用户名、密码和地点是否正确填写")
     exit(1)
 
