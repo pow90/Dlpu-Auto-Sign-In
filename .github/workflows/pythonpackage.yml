@@ -25,4 +25,6 @@ jobs:
         username: ${{ secrets.username }}
         password: ${{ secrets.password }}
         location: ${{ secrets.location }} 
-      run: python sign_in.py
+      run: |
+        python sign_in.py
+        python notification.py
