@@ -1,4 +1,4 @@
-# coding=gbk
+# coding=UTF-8
 import requests
 api = "https://sc.ftqq.com/你的SCKEY.send"
 title = "签到成功"
