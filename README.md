@@ -21,7 +21,7 @@ location ：你的地点
 
 ![3ZBsR1.jpg](https://s2.ax1x.com/2020/02/20/3ZBsR1.jpg)
 
-然后点击你的仓库上方的 Actions 选项，会打开一个如下的页面，点击 I understand my workflows, go ahead and run them
+然后点击你的仓库上方的 Actions 选项，会打开一个如下的页面，点击 `I understand my workflows, go ahead and run them`
  按钮确认在 Fork 的仓库上启用 Github Actions 。若还有显示什么，直接点击下一步或同意按钮。
  
 ![VZ5E.png](https://img.xirikm.net/images/VZ5E.png)
@@ -42,4 +42,4 @@ location ：你的地点
 
 ## 处理异常
 
-由于 Github 与国内的连接有时会中断，假如打卡失败（小概率事件，打卡二十次遇到一次），可以把 .github/workflows/pythonpackage.yml 中的 0 1 * * * 改为 60 * * * * ，杜绝失败的情况。若做了这个修改，必须把微信推送关掉，否则每小时推送一次打卡成功。
+由于 Github 与国内的连接有时会中断，假如打卡失败（小概率事件，打卡二十次遇到一次），可以把 `.github/workflows/pythonpackage.yml` 中的 `0 1 * * *` 改为 `60 * * * *` ，杜绝失败的情况。若做了这个修改，必须把微信推送关掉，否则每小时推送一次打卡成功。
