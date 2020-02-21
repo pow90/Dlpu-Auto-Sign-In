@@ -57,6 +57,11 @@ browser.find_element_by_xpath('//*[@id="item"]/ul/li[7]/div/input[2]').click()
 browser.find_element_by_xpath('//*[@id="item"]/div/button').click()
 time.sleep(5)
 
+try:
+    browser.switch_to.alert.accept()
+except:
+    pass
+
 browser.get("https://www.dxever.com/fei/delete/ncp/history.html")
 if "今天" in browser.page_source:
     print("签到成功")
