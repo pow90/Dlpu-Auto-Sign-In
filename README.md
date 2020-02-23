@@ -1,5 +1,5 @@
 # Dlpu Auto Sign In
-使用 GitHub Actions 自动完成疫情情况打卡
+使用 GitHub Actions 自动完成大学印象疫情情况打卡
 
 ## 使用说明
 
